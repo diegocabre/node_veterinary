@@ -1,5 +1,5 @@
 const fs = require('fs');
-const citasPath = './citas.json';
+const ruta_citas = './citas.json';
 
 function registrarCita(cita) {
   // Lee las citas existentes
@@ -9,7 +9,7 @@ function registrarCita(cita) {
   citas.push(cita);
 
   // Guarda las citas actualizadas en el archivo json
-  fs.writeFileSync(citasPath, JSON.stringify(citas, null, 2));
+  fs.writeFileSync(ruta_citas, JSON.stringify(citas, null, 2));
 
   console.log('Cita registrada correctamente.');
 }
@@ -17,7 +17,7 @@ function registrarCita(cita) {
 function leerCitas() {
   try {
     // Intenta leer el archivo json de citas
-    const citasData = fs.readFileSync(citasPath);
+    const citasData = fs.readFileSync(ruta_citas);
     return JSON.parse(citasData);
   } catch (error) {
     // Si hay un error al leer el archivo o el archivo no existe, devuelve un arreglo vacío
