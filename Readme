@@ -1,0 +1,5 @@
+-- Para registrarescrinir en consola
+node index.js registrar NombreDelAnimal Edad TipoAnimal Color Enfermedad
+
+-- Para Leer
+node index.js leer
