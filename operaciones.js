@@ -17,7 +17,7 @@ function registrarCita(cita) {
 function leerCitas() {
   try {
     // Intenta leer el archivo json de citas
-    const citasData = fs.readFileSync(ruta_citas);
+    const citasData = fs.readFileSync(ruta_citas, 'utf-8');
     return JSON.parse(citasData);
   } catch (error) {
     // Si hay un error al leer el archivo o el archivo no existe, devuelve un arreglo vacío
